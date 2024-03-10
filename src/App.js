@@ -55,13 +55,17 @@ function App() {
     try {
       const historyResponce = await axios.get(forecasturl);
       console.log(historyResponce);
-      console.log(historyResponce.data.timelines.daily.map((timeline, i) => {
-        return timeline.values["temperatureAverage"];
-      }));
-      setHistory(historyResponce.data.timelines.daily.map((timeline, i) => {
-        console.log(timeline);
-        return timeline.values["temperatureAvg"];
-      }));
+      console.log(
+        historyResponce.data.timelines.daily.map((timeline, i) => {
+          return timeline.values["temperatureAverage"];
+        })
+      );
+      setHistory(
+        historyResponce.data.timelines.daily.map((timeline, i) => {
+          console.log(timeline);
+          return timeline.values["temperatureAvg"];
+        })
+      );
     } catch (error) {
       console.log(error);
       toast.error("Rate limit exceeds! Try after some time.");
@@ -72,13 +76,14 @@ function App() {
   useEffect(() => {
     fetchHistory();
     fetchForecast();
-
   }, []);
 
   const degreeTemp = Number(temp?.data?.values?.temperature) + "°C";
 
-  const fahrenheitTemp =
+  const fahrenheitTemperature =
     Number(temp?.data?.values?.temperature * (9 / 5) + 32) + "°F";
+
+  const fahrenheitTemp = Math.round(fahrenheitTemperature * 100) / 100;
 
   const uvValue = Number(temp?.data?.values?.uvIndex / 100);
 
@@ -125,6 +130,7 @@ function App() {
                 onChange={(e) => setCity(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter") fetchForecast();
+                  if (e.key === "Enter") fetchHistory();
                 }}
               />
             </div>
@@ -218,7 +224,7 @@ function App() {
                 options={{
                   responsive: false,
                 }}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer", display: "flex" }}
                 data={{
                   labels: [
                     "Monday",
