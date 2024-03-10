@@ -23,5 +23,5 @@ bun dev
   
 You can check out the [React.js](https://github.com/facebook/react/releases) GitHub repository - your feedback and contributions are welcome!
 
-[!Image Link](https://github.com/tejugawande25/modern_wheather/blob/master/modern_wheather_github.png)
+![Image Link](https://github.com/tejugawande25/modern_wheather/blob/master/modern_wheather_github.png)
 
