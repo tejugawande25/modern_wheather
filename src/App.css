@@ -57,12 +57,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 .degree-container{
   height: 100px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin-left: 50px;
 }
 .degree-temperature{
@@ -123,7 +123,7 @@
    display: flex;
    gap: 10px;
    align-items: center;
-   justify-content: end;
+   justify-content: flex-end;
 }
 .degree-button{
   border-radius: 50%;
@@ -163,7 +163,7 @@
   width:22%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -173,7 +173,7 @@
   width:22%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -183,7 +183,7 @@
   width:22%;
   display:flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -194,7 +194,7 @@
   border-radius: 5px; 
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

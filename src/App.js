@@ -135,7 +135,7 @@ function App() {
               />
             </div>
             <div className="image-container">
-              <img className="cloud-image" src={imageSource} />
+              <img className="cloud-image" src={imageSource} alt="cloud" />
             </div>
             <div className="temperature">
               <div className="degree-container">
@@ -169,11 +169,11 @@ function App() {
             </div>
             <div className="basic-info">
               <div className="basic-info-upper">
-                <img className="basic-info-image" src={cloudImage} />
+                <img className="basic-info-image" src={cloudImage} alt="basic-info"/>
                 <p>{cloudInformation()}</p>
               </div>
               <div className="basic-info-lower">
-                <img className="basic-info-image" src={rainImage} />
+                <img className="basic-info-image" src={rainImage} alt="basic" />
                 <p>Rain-{temp?.data?.values?.rainIntensity * 10}%</p>
               </div>
             </div>
@@ -181,6 +181,7 @@ function App() {
               <img
                 style={{ height: "100%", width: "100%" }}
                 src="https://cdn.pixabay.com/photo/2022/11/07/20/23/new-york-7577186_640.jpg"
+                alt="lower"
               />
             </div>
           </div>
@@ -210,6 +211,7 @@ function App() {
                   <img
                     style={{ height: "100%", width: "100%" }}
                     src="https://media.istockphoto.com/id/1369508766/photo/beautiful-successful-latin-woman-smiling.jpg?s=612x612&w=0&k=20&c=LoznG6eGT42_rs9G1dOLumOTlAveLpuOi_U755l_fqI="
+                    alt="profile"
                   />
                 </div>
               </div>
@@ -266,6 +268,7 @@ function App() {
                 <img
                   src={windImage}
                   style={{ height: "100px", width: "60%" }}
+                  alt="wind"
                 />
               </div>
               <div className="humidity-card">
@@ -276,6 +279,7 @@ function App() {
                 <img
                   src={humidityImage}
                   style={{ height: "80px", width: "50%", marginTop: "5px" }}
+                  alt="humidity"
                 />
               </div>
               <div className="visibility-card">
@@ -286,6 +290,7 @@ function App() {
                 <img
                   src={visibiltyImage}
                   style={{ height: "100px", width: "65%", marginTop: "5px" }}
+                  alt="visibility"
                 />
               </div>
               <div className="air-quality-card">
