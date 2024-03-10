@@ -45,16 +45,16 @@ function App() {
       const forecastResponse = await axios.get(url);
       setTemp(forecastResponse.data);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("Rate limit exceeds! Try after some time.");
-      return error.message;
+      // return error.message;
     }
   };
 
   const fetchHistory = async (event) => {
     try {
       const historyResponce = await axios.get(forecasturl);
-      console.log(historyResponce);
+      // console.log(historyResponce);
       console.log(
         historyResponce.data.timelines.daily.map((timeline, i) => {
           return timeline.values["temperatureAverage"];
@@ -62,14 +62,14 @@ function App() {
       );
       setHistory(
         historyResponce.data.timelines.daily.map((timeline, i) => {
-          console.log(timeline);
+          // console.log(timeline);
           return timeline.values["temperatureAvg"];
         })
       );
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error("Rate limit exceeds! Try after some time.");
-      return error.message;
+      // return error.message;
     }
   };
 
