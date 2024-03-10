@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.80e122ad.css",
+    "main.js": "/static/js/main.c90f3880.js",
+    "static/js/453.789ca014.chunk.js": "/static/js/453.789ca014.chunk.js",
+    "static/media/whispy-cloud.png": "/static/media/whispy-cloud.a24dc237e6e7030aa2c1.png",
+    "static/media/mostly-cloudly.png": "/static/media/mostly-cloudly.9ee3e864955f971cb0de.png",
+    "static/media/clear-sky.png": "/static/media/clear-sky.f590b14fb4c86689af4d.png",
+    "static/media/visibility.png": "/static/media/visibility.b652ad7cf56a18057b17.png",
+    "static/media/humidity.png": "/static/media/humidity.000c9129550974c8acc8.png",
+    "static/media/cloud.png": "/static/media/cloud.be4f34fc44a6b5a43b2d.png",
+    "static/media/wind.png": "/static/media/wind.78ac6cda0926998ece6b.png",
+    "static/media/rain.png": "/static/media/rain.b04a3dc413e1c401752b.png",
+    "index.html": "/index.html",
+    "main.80e122ad.css.map": "/static/css/main.80e122ad.css.map",
+    "main.c90f3880.js.map": "/static/js/main.c90f3880.js.map",
+    "453.789ca014.chunk.js.map": "/static/js/453.789ca014.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.80e122ad.css",
+    "static/js/main.c90f3880.js"
+  ]
+}
