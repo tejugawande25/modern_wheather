@@ -1,5 +1,5 @@
 import Chart from "chart.js/auto";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import "./App.css";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,7 +40,7 @@ function App() {
 
   const forecasturl = `https://api.tomorrow.io/v4/weather/forecast?location=${city}&apikey=55InEdnuVku4wIpY4vnL6GHZoJsNuPFA`;
 
-  const fetchForecast = async (event) => {
+  const fetchForecast = useCallback(async (event) => {
     try {
       const forecastResponse = await axios.get(url);
       setTemp(forecastResponse.data);
@@ -49,9 +49,9 @@ function App() {
       toast.error("Rate limit exceeds! Try after some time.");
       // return error.message;
     }
-  };
+  },[])
 
-  const fetchHistory = async (event) => {
+  const fetchHistory = useCallback(async (event) => {
     try {
       const historyResponce = await axios.get(forecasturl);
       // console.log(historyResponce);
@@ -71,12 +71,12 @@ function App() {
       toast.error("Rate limit exceeds! Try after some time.");
       // return error.message;
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchHistory();
     fetchForecast();
-  }, []);
+  }, [fetchForecast,fetchHistory]);
 
   const degreeTemp = Number(temp?.data?.values?.temperature) + "°C";
 
@@ -169,7 +169,11 @@ function App() {
             </div>
             <div className="basic-info">
               <div className="basic-info-upper">
-                <img className="basic-info-image" src={cloudImage} alt="basic-info"/>
+                <img
+                  className="basic-info-image"
+                  src={cloudImage}
+                  alt="basic-info"
+                />
                 <p>{cloudInformation()}</p>
               </div>
               <div className="basic-info-lower">
