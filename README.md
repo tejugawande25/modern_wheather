@@ -23,7 +23,28 @@ bun dev
   
 You can check out the [React.js](https://github.com/facebook/react/releases) GitHub repository - your feedback and contributions are welcome!
 
+# Dependencies
+
+The following are depencies used in this application:
+
+- react-chartjs-2
+- react-hot-toast
+- react-gauge-chart
+
+# Issues
+
+This react application is only responsive for window.
+
+# Contact Information
+
+Name: Tejas Bhaskar Gawande
+
+Phone No: 8482978893
+
+Gmail: tejugawande25@gmail.com
+
+
+
 ![Image Link](https://github.com/tejugawande25/modern_wheather/blob/master/modern_wheather_github.png)
 
-# Note
-This React Application is only responsive for windows application for now.
+
